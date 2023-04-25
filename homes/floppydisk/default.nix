@@ -29,7 +29,12 @@
     home-manager.enable = true;
 
     # Enable fish shell
-    fish.enable = true;
+    fish = {
+      enable = true;
+      interactiveShellInit = ''
+        set fish_greeting # Disable fish_greeting
+      '';
+    };
 
     # enable git and configure users
     git = {
