@@ -28,6 +28,9 @@
     # Enable home-manager
     home-manager.enable = true;
 
+    # Enable fish shell
+    fish.enable = true;
+
     # enable git and configure users
     git = {
       enable = true;

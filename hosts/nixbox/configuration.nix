@@ -97,6 +97,7 @@
       #  thunderbird
     ];
     initialPassword = "changeme";
+    shell = pkgs.fish;
   };
 
   # Allow unfree packages
@@ -113,8 +114,9 @@
     nerdfonts
     jetbrains-mono
     kitty
-    fish
   ];
+
+  programs.fish.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
