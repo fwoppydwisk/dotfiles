@@ -11,8 +11,8 @@
     Unit.After = ["graphical-session.target"];
     Install.WantedBy = ["graphical-session.target"];
   };
-  home.packages = [pkgs.webcord-vencord];
 in {
+  home.packages = [pkgs.webcord-vencord];
   systemd.user.services = {
     arRPC = mkService {
       Unit.Description = "arRPC systemd service";
