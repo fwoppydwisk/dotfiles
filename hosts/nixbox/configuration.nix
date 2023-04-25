@@ -111,6 +111,7 @@
     pinentry
     nerdfonts
     jetbrains-mono
+    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
