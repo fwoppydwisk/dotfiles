@@ -20,7 +20,7 @@
   home = {
     username = "floppydisk";
     homeDirectory = "/home/floppydisk";
-    packages = with pkgs; [steam vscode _1password-gui _1password neofetch microsoft-edge webcord-vencord];
+    packages = with pkgs; [steam vscode _1password-gui _1password neofetch microsoft-edge webcord-vencord jetbrains.ruby-mine jetbrains.rider jetbrains.phpstorm jetbrains.idea-ultimate];
   };
 
   # Add stuff for your user as you see fit:
