@@ -15,6 +15,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     ./neovim-flake.nix
+    ./arrpc.nix
   ];
 
   home = {
@@ -27,7 +28,6 @@
       _1password
       neofetch
       microsoft-edge
-      webcord-vencord
       jetbrains.ruby-mine
       jetbrains.rider
       jetbrains.phpstorm
