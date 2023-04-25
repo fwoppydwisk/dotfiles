@@ -25,9 +25,6 @@
 
   # Add stuff for your user as you see fit:
   programs = {
-    # Enable neovim
-    neovim.enable = true;
-
     # Enable home-manager
     home-manager.enable = true;
 
