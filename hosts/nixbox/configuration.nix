@@ -81,6 +81,7 @@
   };
 
   services.xserver.videoDrivers = ["nvidia" "intel"];
+  hardware.opengl.driSupport32Bit = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
