@@ -112,6 +112,7 @@
     nerdfonts
     jetbrains-mono
     kitty
+    fish
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
