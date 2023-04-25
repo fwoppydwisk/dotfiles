@@ -16,6 +16,26 @@
         "type": "github"
       }
     },
+    "arrpc": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1682178574,
+        "narHash": "sha256-CMEeluAfiDt0c9rl9vcbqgOxm/0nFtmHJYiTCIEDLGo=",
+        "owner": "notashelf",
+        "repo": "arrpc-flake",
+        "rev": "965b885e182a695e45fba3ad97ec85e1fe31171a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "notashelf",
+        "repo": "arrpc-flake",
+        "type": "github"
+      }
+    },
     "bufdelete-nvim": {
       "flake": false,
       "locked": {
@@ -1419,6 +1439,7 @@
     },
     "root": {
       "inputs": {
+        "arrpc": "arrpc",
         "home-manager": "home-manager",
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs_4",

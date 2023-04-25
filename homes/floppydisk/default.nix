@@ -1,7 +1,7 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
-  outputs,
+  inputs,
   pkgs,
   ...
 }: {
@@ -20,7 +20,20 @@
   home = {
     username = "floppydisk";
     homeDirectory = "/home/floppydisk";
-    packages = with pkgs; [steam vscode _1password-gui _1password neofetch microsoft-edge webcord-vencord jetbrains.ruby-mine jetbrains.rider jetbrains.phpstorm jetbrains.idea-ultimate];
+    packages = with pkgs; [
+      steam
+      vscode
+      _1password-gui
+      _1password
+      neofetch
+      microsoft-edge
+      webcord-vencord
+      jetbrains.ruby-mine
+      jetbrains.rider
+      jetbrains.phpstorm
+      jetbrains.idea-ultimate
+      inputs.arrpc.packages.${pkgs.system}.arrpc
+    ];
   };
 
   # Add stuff for your user as you see fit:
