@@ -33,6 +33,7 @@
       jetbrains.phpstorm
       jetbrains.idea-ultimate
       inputs.arrpc.packages.${pkgs.system}.arrpc
+      lazygit
     ];
   };
 
