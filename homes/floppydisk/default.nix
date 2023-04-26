@@ -47,6 +47,7 @@
       enable = true;
       interactiveShellInit = ''
         set fish_greeting # Disable fish_greeting
+        export GPG_TTY=$(tty)
       '';
     };
 
@@ -55,6 +56,10 @@
       enable = true;
       userName = "Frankie B.";
       userEmail = "git@diskfloppy.me";
+      signing = {
+        key = "B428A0D1B4E2BAB0";
+        signByDefault = true;
+      };
     };
   };
 
