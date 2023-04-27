@@ -114,6 +114,7 @@
     nerdfonts
     jetbrains-mono
     kitty
+    ntfs3g
   ];
 
   programs.fish.enable = true;
