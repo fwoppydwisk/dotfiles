@@ -35,6 +35,7 @@
       inputs.arrpc.packages.${pkgs.system}.arrpc
       lazygit
       dotnet-sdk
+      minecraft
     ];
   };
 
