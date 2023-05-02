@@ -36,6 +36,7 @@
       lazygit
       dotnet-sdk
       minecraft
+      mongodb-compass
     ];
   };
 
