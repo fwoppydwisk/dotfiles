@@ -115,6 +115,7 @@
     jetbrains-mono
     kitty
     ntfs3g
+    dolphin-emu
   ];
 
   programs.fish.enable = true;
