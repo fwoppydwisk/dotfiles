@@ -37,6 +37,7 @@
       dotnet-sdk
       minecraft
       mongodb-compass
+      tidal-hifi
     ];
   };
 
