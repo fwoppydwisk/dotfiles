@@ -1,26 +1,14 @@
 {
-  lib,
   inputs,
   pkgs,
   ...
-}: with lib; let 
-  arRPC = inputs.arrpc.packages.${pkgs.system}.default;
-
-  mkService = lib.recursiveUpdate {
-    Unit.PartOf = ["graphical-session.target"];
-    Unit.After = ["graphical-session.target"];
-    Install.WantedBy = ["graphical-session.target"];
-  };
-in {
+}: {
+  imports = [
+    inputs.arrpc.homeManagerModules.default
+  ];
+  
   home.packages = [pkgs.webcord-vencord];
-  systemd.user.services = {
-    arRPC = mkService {
-      Unit.Description = "arRPC systemd service";
-      Service = {
-        ExecStart = "${lib.getExe arRPC}";
-        Restart = "always";
-      };
-    };
-  };
-}
 
+  # provided by the arrpc-flake home-manager module
+  services.arrpc.enable = true;
+}
