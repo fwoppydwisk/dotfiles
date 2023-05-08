@@ -32,12 +32,16 @@
       jetbrains.rider
       jetbrains.phpstorm
       jetbrains.idea-ultimate
+      jetbrains.webstorm
       inputs.arrpc.packages.${pkgs.system}.arrpc
       lazygit
       dotnet-sdk
       minecraft
       mongodb-compass
       tidal-hifi
+      teamspeak5_client
+      rdesktop
+      pfetch
     ];
   };
 
