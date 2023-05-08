@@ -116,6 +116,8 @@
     kitty
     ntfs3g
     dolphin-emu
+    htop
+    pciutils
   ];
 
   programs.fish.enable = true;
