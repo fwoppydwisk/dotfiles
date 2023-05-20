@@ -118,6 +118,12 @@
     dolphin-emu
     htop
     pciutils
+    usbutils
+    isoimagewriter
+    jdk17
+    prismlauncher
+    maven
+    nvtop
   ];
 
   programs.fish.enable = true;
