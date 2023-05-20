@@ -23,6 +23,10 @@
     homeDirectory = "/home/floppydisk";
     packages = with pkgs; [
       steam
+      gzdoom
+      obs-studio
+      yt-dlp
+      vlc
       vscode
       _1password-gui
       _1password
@@ -42,6 +46,9 @@
       teamspeak5_client
       rdesktop
       pfetch
+      caprine-bin
+      lightworks
+      gitkraken
     ];
   };
 
