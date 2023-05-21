@@ -48,7 +48,7 @@
       pfetch
       caprine-bin
       lightworks
-      gitkraken
+      httpie
     ];
   };
 
@@ -71,9 +71,11 @@
       enable = true;
       userName = "Frankie B.";
       userEmail = "git@diskfloppy.me";
-      signing = {
-        key = "B428A0D1B4E2BAB0";
-        signByDefault = true;
+      extraConfig = {
+        # Sign all commits using ssh key
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        user.signingkey = "~/.ssh/id_ed25519.pub";
       };
     };
   };
