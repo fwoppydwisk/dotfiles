@@ -49,6 +49,8 @@
       caprine-bin
       lightworks
       httpie
+      partition-manager
+      _3llo
     ];
   };
 
