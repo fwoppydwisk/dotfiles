@@ -47,8 +47,13 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Enable SDDM and set second display resolution/position
+  services.xserver.displayManager = {
+    sddm.enable = true;
+    setupCommands = "xrandr --output HDMI-0 --mode 1280x1024 --output HDMI-0 --right-of DP-0";
+  };
+
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
