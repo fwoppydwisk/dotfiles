@@ -51,6 +51,7 @@
       httpie
       partition-manager
       _3llo
+      plexamp
     ];
   };
 
