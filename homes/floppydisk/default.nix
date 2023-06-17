@@ -22,6 +22,23 @@
     username = "floppydisk";
     homeDirectory = "/home/floppydisk";
     packages = with pkgs; [
+      handbrake
+      nodejs_18
+      nodePackages.yarn
+      nodePackages.ts-node
+      php82
+      php82Packages.composer
+      thunderbird
+      deno
+      picard
+      codeql
+      discord
+      libsForQt5.vvave
+      realvnc-vnc-viewer
+      rpcs3
+      pcsxr
+      pcsx2
+      rpi-imager
       steam
       gzdoom
       obs-studio
@@ -30,6 +47,7 @@
       vscode
       _1password-gui
       _1password
+      git-credential-1password
       neofetch
       microsoft-edge
       jetbrains.ruby-mine
@@ -51,7 +69,13 @@
       httpie
       partition-manager
       _3llo
-      plexamp
+      gimp
+      qemu
+      virt-manager
+      python310
+      python310Packages.pip
+      python310Packages.discordpy
+      wakatime
     ];
   };
 
