@@ -47,6 +47,9 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Enable the flatpak service
+  services.flatpak.enable = true;
+
   # Enable SDDM and set second display resolution/position
   services.xserver.displayManager = {
     sddm.enable = true;
@@ -64,9 +67,6 @@
 
   # Enable experimental features
   nix.settings.extra-experimental-features = ["flakes" "nix-command"];
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -129,6 +129,11 @@
     prismlauncher
     maven
     nvtop
+    pavucontrol
+    paprefs
+    pulseaudioFull
+    screen
+    linuxKernel.packages.linux_zen.v4l2loopback
   ];
 
   programs.fish.enable = true;
@@ -145,6 +150,10 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Enable printing
+  services.printing.enable = true;
+  services.printing.drivers = [pkgs.hplipWithPlugin];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
