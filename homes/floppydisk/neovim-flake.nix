@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.neovim-flake.homeManagerModules.default
   ];
@@ -143,6 +147,10 @@
         motion = {
           hop.enable = true;
           leap.enable = false;
+        };
+        vim-wakatime = {
+          enable = true;
+          cli-package = pkgs.wakatime;
         };
       };
 
