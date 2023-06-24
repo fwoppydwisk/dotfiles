@@ -108,15 +108,18 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # Tools
+    vim
     wget
     git
     gnupg
     pinentry
-    nerdfonts
-    jetbrains-mono
     kitty
     ntfs3g
+
+    # Fonts
+    nerdfonts
+    jetbrains-mono
   ];
 
   programs.fish.enable = true;

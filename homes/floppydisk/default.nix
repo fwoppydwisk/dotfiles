@@ -22,60 +22,79 @@
     username = "floppydisk";
     homeDirectory = "/home/floppydisk";
     packages = with pkgs; [
+      # Utils
       handbrake
-      nodejs_18
-      nodePackages.yarn
-      nodePackages.ts-node
-      php82
-      php82Packages.composer
       thunderbird
-      deno
       picard
-      codeql
-      discord
-      libsForQt5.vvave
       realvnc-vnc-viewer
-      rpcs3
-      pcsxr
-      pcsx2
       rpi-imager
-      steam
-      gzdoom
       obs-studio
       yt-dlp
-      vlc
-      vscode
       _1password-gui
       _1password
       git-credential-1password
       neofetch
       microsoft-edge
-      jetbrains.ruby-mine
-      jetbrains.rider
-      jetbrains.phpstorm
-      jetbrains.idea-ultimate
-      jetbrains.webstorm
       inputs.arrpc.packages.${pkgs.system}.arrpc
-      lazygit
-      dotnet-sdk
-      minecraft
-      mongodb-compass
-      tidal-hifi
-      teamspeak5_client
       rdesktop
       pfetch
-      caprine-bin
-      lightworks
-      httpie
       partition-manager
       _3llo
       gimp
       qemu
       virt-manager
+
+      # DevTools
+      github-desktop
+      gh
+      codeql
+      vscode
+      jetbrains.ruby-mine
+      jetbrains.rider
+      jetbrains.phpstorm
+      jetbrains.idea-ultimate
+      jetbrains.webstorm
+      lazygit
+      wakatime
+      mongodb-compass
+      httpie
+
+      # Langs
+      openscad
+      nodejs_18
+      nodePackages.yarn
+      nodePackages.ts-node
+      php82
+      php82Packages.composer
+      deno
       python310
       python310Packages.pip
       python310Packages.discordpy
-      wakatime
+      dotnet-sdk
+      jdk17
+      maven
+
+      # Comms
+      nheko
+      element-desktop
+      discord
+      caprine-bin
+      teamspeak5_client
+
+      # Gaming
+      rpcs3
+      pcsxr
+      pcsx2
+      steam
+      gzdoom
+      minecraft
+      dolphin-emu
+      prismlauncher
+
+      # Media
+      vlc
+      libsForQt5.vvave
+      tidal-hifi
     ];
   };
 

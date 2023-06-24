@@ -108,32 +108,35 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # security is for wusses
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1u"
+  ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # Tools
+    vim
     wget
     git
     gnupg
     pinentry
-    nerdfonts
-    jetbrains-mono
     kitty
     ntfs3g
-    dolphin-emu
-    htop
+    pulseaudioFull
+    linuxKernel.packages.linux_zen.v4l2loopback
     pciutils
     usbutils
     isoimagewriter
-    jdk17
-    prismlauncher
-    maven
     nvtop
+    screen
     pavucontrol
     paprefs
-    pulseaudioFull
-    screen
-    linuxKernel.packages.linux_zen.v4l2loopback
+
+    # Fonts
+    nerdfonts
+    jetbrains-mono
   ];
 
   programs.fish.enable = true;
