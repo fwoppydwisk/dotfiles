@@ -141,7 +141,7 @@
       };
 
       vim.utility = {
-        colorizer.enable = true;
+        ccc.enable = true;
         icon-picker.enable = true;
         diffview-nvim.enable = true;
         motion = {
@@ -165,7 +165,15 @@
 
       vim.ui = {
         noice.enable = true;
-        smartcolumn.enable = true;
+        smartcolumn = {
+          enable = true;
+          columnAt.languages = {
+            nix = 150;
+            ruby = 110;
+            java = 120;
+            go = [110 150];
+          };
+        };
       };
 
       vim.assistant = {
