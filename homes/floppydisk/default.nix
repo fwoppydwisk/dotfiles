@@ -73,6 +73,7 @@
       dotnet-sdk
       jdk17
       maven
+      dart
 
       # Comms
       nheko
