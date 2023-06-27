@@ -43,6 +43,8 @@
       gimp
       qemu
       virt-manager
+      exactaudiocopy
+      fsv
 
       # DevTools
       github-desktop
@@ -91,6 +93,10 @@
       minecraft
       dolphin-emu
       prismlauncher
+      fceux
+      snes9x
+      heroic
+      openrct2
 
       # Media
       vlc
