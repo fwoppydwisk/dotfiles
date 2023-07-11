@@ -102,7 +102,7 @@
       #  thunderbird
     ];
     initialPassword = "changeme";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
@@ -139,7 +139,7 @@
     jetbrains-mono
   ];
 
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

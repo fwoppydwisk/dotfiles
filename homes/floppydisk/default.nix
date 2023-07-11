@@ -119,6 +119,9 @@
       vlc
       libsForQt5.vvave
       tidal-hifi
+
+      # zsh Themes
+      zsh-powerlevel10k
     ];
   };
 
@@ -127,12 +130,36 @@
     # Enable home-manager
     home-manager.enable = true;
 
-    # Enable fish shell
-    fish = {
+    # Enable z-shell
+    zsh = {
       enable = true;
-      interactiveShellInit = ''
-        set fish_greeting # Disable fish_greeting
-        export GPG_TTY=$(tty)
+      shellAliases = {
+        ls = "lsd";
+        ll = "ls -l";
+        la = "ls -la";
+      };
+      history = {
+        size = 10000;
+        path = "$HOME/.config/zsh/history";
+      };
+      oh-my-zsh = {
+        enable = true;
+        plugins = [
+          "git"
+          "thefuck"
+        ];
+        custom = "$HOME/.oh-my-custom";
+        theme = "powerlevel10k/powerlevel10k";
+      };
+      plugins = [
+        {
+          name = "powerlevel10k";
+          src = pkgs.zsh-powerlevel10k;
+          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        }
+      ];
+      initExtra = ''
+        source ~/.p10k.zsh
       '';
     };
 
