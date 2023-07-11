@@ -176,6 +176,20 @@
         init.defaultBranch = "master";
       };
     };
+    irssi = {
+      enable = true;
+      networks = {
+        znc = {
+          nick = "floppydisk";
+          server = {
+            address = "irc.nick99nack.com";
+            port = 8888;
+            autoConnect = true;
+            ssl.enable = false;
+          };
+        };
+      };
+    };
   };
 
   # Nicely reload system units when changing configs
