@@ -3,6 +3,7 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }: {
   # You can import other home-manager modules here
@@ -33,11 +34,9 @@
       _1password-gui
       _1password
       git-credential-1password
-      neofetch
       microsoft-edge
       inputs.arrpc.packages.${pkgs.system}.arrpc
       rdesktop
-      pfetch
       partition-manager
       _3llo
       gimp
@@ -45,6 +44,20 @@
       virt-manager
       exactaudiocopy
       fsv
+      lsd
+      lsdvd
+      thefuck
+      zip
+      unzip
+
+      # Fetch
+      neofetch
+      yafetch
+      cpufetch
+      bunnyfetch
+      nitch
+      screenfetch
+      starfetch
 
       # DevTools
       github-desktop
@@ -59,6 +72,7 @@
       lazygit
       wakatime
       mongodb-compass
+      mongosh
       httpie
 
       # Langs
@@ -66,6 +80,7 @@
       nodejs_18
       nodePackages.yarn
       nodePackages.ts-node
+      nodePackages.pnpm
       php82
       php82Packages.composer
       deno
@@ -76,6 +91,8 @@
       jdk17
       maven
       dart
+      purescript
+      spago
 
       # Comms
       nheko
