@@ -49,6 +49,7 @@
       thefuck
       zip
       unzip
+      peek
 
       # Fetch
       neofetch
@@ -74,6 +75,8 @@
       mongodb-compass
       mongosh
       httpie
+      ngrok
+      mycli
 
       # Langs
       openscad
