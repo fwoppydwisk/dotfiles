@@ -34,10 +34,9 @@
       _1password-gui
       _1password
       git-credential-1password
-      microsoft-edge
+      firefox
       inputs.arrpc.packages.${pkgs.system}.arrpc
       rdesktop
-      partition-manager
       _3llo
       gimp
       qemu
@@ -50,6 +49,7 @@
       zip
       unzip
       peek
+      notion-app-enhanced
 
       # Fetch
       neofetch
@@ -77,6 +77,7 @@
       httpie
       ngrok
       mycli
+      squirrel-sql
 
       # Langs
       openscad
