@@ -14,7 +14,7 @@
 
     # neovim-flake
     neovim-flake = {
-      url = "github:notashelf/neovim-flake?ref=release/v0.4";
+      url = "github:notashelf/neovim-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
