@@ -50,6 +50,7 @@
       unzip
       peek
       notion-app-enhanced
+      libresprite
 
       # Fetch
       neofetch
@@ -118,6 +119,7 @@
       snes9x
       heroic
       openrct2
+      osu-lazer-bin
 
       # Media
       vlc
