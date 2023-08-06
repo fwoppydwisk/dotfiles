@@ -16,7 +16,7 @@ Here are some details about my setup:
 
 ## Main Applications
 
-- **Browser:** [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/)
+- **Browser:** [Mozilla Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 - **E-mail:** [Mozilla Thunderbird](https://www.thunderbird.net/en-US/)
 - **Media:** [VLC Media Player](https://www.videolan.org/) / [Plexamp](https://www.plex.tv/plexamp/)
 
