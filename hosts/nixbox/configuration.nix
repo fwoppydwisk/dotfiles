@@ -97,9 +97,7 @@
     description = "Frankie B.";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-      firefox
       kate
-      #  thunderbird
     ];
     initialPassword = "changeme";
     shell = pkgs.zsh;

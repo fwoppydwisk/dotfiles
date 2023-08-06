@@ -94,9 +94,7 @@
     description = "Frankie B.";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
       kate
-      teams
     ];
     initialPassword = "changeme";
     shell = pkgs.zsh;
