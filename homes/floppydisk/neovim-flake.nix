@@ -92,13 +92,56 @@
       };
 
       vim.filetree = {
-        nvimTreeLua = {
+                nvimTree = {
           enable = true;
-          renderer = {
-            rootFolderLabel = null;
+          openOnSetup = true;
+          disableNetrw = true;
+
+          hijackUnnamedBufferWhenOpening = true;
+          hijackCursor = true;
+          hijackDirectories = {
+            enable = true;
+            autoOpen = true;
           };
+
+          git = {
+            enable = true;
+            showOnDirs = false;
+            timeout = 100;
+          };
+
           view = {
-            width = 25;
+            preserveWindowProportions = false;
+            cursorline = false;
+            width = {
+              min = 35;
+              max = -1;
+              padding = 1;
+            };
+          };
+
+          renderer = {
+            indentMarkers.enable = true;
+            rootFolderLabel = false;
+
+            icons = {
+              modifiedPlacement = "after";
+              gitPlacement = "after";
+              show.git = true;
+              show.modified = true;
+            };
+          };
+
+          diagnostics.enable = true;
+
+          modified = {
+            enable = true;
+            showOnDirs = false;
+            showOnOpenDirs = true;
+          };
+
+          mappings = {
+            toggle = "<C-w>";
           };
         };
       };

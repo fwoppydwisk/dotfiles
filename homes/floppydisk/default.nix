@@ -48,7 +48,6 @@
       thefuck
       zip
       unzip
-      peek
       notion-app-enhanced
       libresprite
       qbittorrent
