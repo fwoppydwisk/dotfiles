@@ -51,6 +51,8 @@
       peek
       notion-app-enhanced
       libresprite
+      qbittorrent
+      wine
 
       # Fetch
       neofetch
