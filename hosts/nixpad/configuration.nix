@@ -120,17 +120,35 @@
     pinentry
     kitty
     ntfs3g
+    pulseaudioFull
+    linuxKernel.packages.linux_zen.v4l2loopback
+    pciutils
+    usbutils
+    isoimagewriter
+    nvtop
+    screen
+    pavucontrol
+    paprefs
+    gcc
+
 
     # Fonts
     nerdfonts
     jetbrains-mono
 
     #other crap
-    rofi
+    dunst
+    libnotify
+    swww
+    rofi-wayland
+    networkmanagerapplet
+    grim
+    slurp
     wl-clipboard
+    font-awesome
     dunst
     (
-      pkgs.waybar.overrideAttrs (oldAttrs: {
+      waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
       })
     )
