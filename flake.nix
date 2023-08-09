@@ -23,12 +23,16 @@
       url = "github:notashelf/arrpc-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # hyprland
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    hyprland,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -78,6 +82,8 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
+          hyprland.homeManagerModules.default
+          {wayland.windowManager.hyprland.enable = true;}
           # > Our main home-manager configuration file <
           ./homes/floppydisk
         ];

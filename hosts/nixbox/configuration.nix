@@ -59,6 +59,13 @@
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.desktopManager.plasma5.enable = true;
 
+  # Enable hyprland
+  programs.hyprland = {
+    enable = true;
+    nvidiaPatches = true;
+    xwayland.enable = true;
+  };
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -77,16 +84,25 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
 
-  services.xserver.videoDrivers = ["nvidia" "intel"];
-  hardware.opengl.driSupport32Bit = true;
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware = {
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+    nvidia = {
+      modesetting.enable = true;
+      nvidiaSettings = true;
+    };
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -131,11 +147,35 @@
     screen
     pavucontrol
     paprefs
+    gcc
 
     # Fonts
     nerdfonts
     jetbrains-mono
+
+    # other shit
+    dunst
+    libnotify
+    swww
+    rofi-wayland
+    networkmanagerapplet
+    grim
+    slurp
+    wl-clipboard
+    font-awesome
+    (waybar.overrideAttrs (oldAttrs: {
+      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      })
+    )
   ];
+
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   programs.zsh.enable = true;
 
