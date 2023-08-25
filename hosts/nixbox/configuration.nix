@@ -148,15 +148,20 @@
     jetbrains-mono
 
     # other shit
-    dunst
     libnotify
-    swww
-    rofi-wayland
+    hyprpaper
     networkmanagerapplet
     grim
     slurp
     wl-clipboard
     font-awesome
+    rofi
+    wlogout
+    swaynotificationcenter
+    swaylock
+    sway
+    swayidle
+    helvum
     (
       waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
@@ -170,7 +175,7 @@
   };
 
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   programs.zsh.enable = true;
 

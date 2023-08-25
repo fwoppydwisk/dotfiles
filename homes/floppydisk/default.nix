@@ -52,6 +52,13 @@
       libresprite
       qbittorrent
       wine
+      vifm
+      cloudflared
+      ansible
+      just
+      pwgen
+      grafx2
+      libreoffice-bin
 
       # Fetch
       neofetch
@@ -80,6 +87,7 @@
       ngrok
       mycli
       squirrel-sql
+      figma-linux
 
       # Langs
       openscad
@@ -103,7 +111,10 @@
       # Comms
       nheko
       element-desktop
-      discord
+      (discord.override {
+        withOpenASAR = true;
+        withVencord = true;
+      })
       caprine-bin
       teamspeak5_client
 
