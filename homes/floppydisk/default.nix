@@ -58,7 +58,7 @@
       just
       pwgen
       grafx2
-      libreoffice-bin
+      libreoffice-fresh
 
       # Fetch
       neofetch
