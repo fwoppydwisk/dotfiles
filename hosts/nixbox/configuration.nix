@@ -75,6 +75,13 @@
   # Enable experimental features
   nix.settings.extra-experimental-features = ["flakes" "nix-command"];
 
+  # Enable automatic gc
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # I never want to touch this again
   security.rtkit.enable = true;
   services.pipewire = {

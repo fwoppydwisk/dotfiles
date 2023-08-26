@@ -65,6 +65,13 @@
   # Enable experimental features
   nix.settings.extra-experimental-features = ["flakes" "nix-command"];
 
+  # Enable automatic gc
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
