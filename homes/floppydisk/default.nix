@@ -106,7 +106,6 @@
       maven
       dart
       purescript
-      spago
 
       # Comms
       nheko
