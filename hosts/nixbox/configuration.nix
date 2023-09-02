@@ -128,6 +128,11 @@
     "openssl-1.1.1u"
   ];
 
+  # Fonts
+  fonts.packages = with pkgs; [
+    winePackages.fonts
+  ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
