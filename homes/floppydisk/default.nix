@@ -218,6 +218,7 @@
   programs.waybar = {
     enable = true;
     settings = import ./waybar.nix;
+    style = import ./waybar-style.nix;
   };
 
   # Nicely reload system units when changing configs

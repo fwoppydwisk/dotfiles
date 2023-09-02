@@ -21,9 +21,9 @@
       "custom/sep_r"
       "cpu"
       "custom/sep_r"
-      "disk"
-      "custom/sep_r"
       "memory"
+      "custom/sep_r"
+      "disk"
       "custom/sep_r"
       "pulseaudio"
       "custom/sep_r"
@@ -137,7 +137,7 @@
     };
 
     "memory" = {
-      format = " {}";
+      format = " {}%";
     };
 
     "battery" = {
