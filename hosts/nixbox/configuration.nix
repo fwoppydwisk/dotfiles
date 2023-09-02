@@ -169,11 +169,6 @@
     sway
     swayidle
     helvum
-    (
-      waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      })
-    )
   ];
 
   environment.sessionVariables = {
