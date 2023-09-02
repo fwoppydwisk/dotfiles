@@ -3,33 +3,22 @@
     layer = "top";
     position = "top";
     height = 27;
-    margin = "7";
     fixed-center = true;
     modules-left = [
-      "wlr/workspaces"
+      "custom/notification"
       "custom/sep"
       "tray"
-      "custom/updates"
     ];
     modules-center = [
-      "clock"
-      "sep"
-      "custom/notification"
+      "wlr/workspaces"
     ];
     modules-right = [
       "battery"
-      "custom/sep_r"
       "cpu"
-      "custom/sep_r"
       "memory"
-      "custom/sep_r"
-      "disk"
-      "custom/sep_r"
       "pulseaudio"
-      "custom/sep_r"
       "network"
-      "custom/sep_r"
-      "custom/launcher"
+      "clock"
     ];
 
     "custon/sep_r" = {
@@ -66,7 +55,7 @@
       disable-scroll = false;
       all-outputs = true;
       format = "{icon}";
-      active-only = true;
+      active-only = false;
       format-icons = {
         "1" = "I";
         "2" = "II";
@@ -119,9 +108,9 @@
 
     "clock" = {
       timezone = "Europe/London";
-      format = "{: %H:%M}";
-      format-alt = "{: %H:%M   %d/%m/%Y}";
-      tooltip-format = "{: %H:%M   %d/%m/%Y}";
+      format = "{:  %H:%M}";
+      format-alt = "{:  %H:%M    %d/%m/%Y}";
+      tooltip-format = "{:  %H:%M    %d/%m/%Y}";
       today-format = "<span color='#aaaaaa'><b><u>{}</u></b></span>";
       calendar-weeks-pos = "right";
       format-calendar = "<span color='#aaaaaa'><b><u>{}</u></b></span>";
@@ -166,19 +155,8 @@
 
     "pulseaudio" = {
       on-click = "pavucontrol";
-      format = "{icon}{volume}%  {format_source}";
-      format-bluetooth = "{icon}{volume}%  {format_source}";
-      format-bluetooth-muted = "{icon}  {format_source}";
-      format-muted = " {format_source}";
-      format-source = " {volume}%";
-      format-source-muted = " ";
+      format = "{icon}{volume}%";
       format-icons = {
-        "headphone" = "";
-        "hands-free" = "";
-        "headset" = "";
-        "phone" = "";
-        "portable" = "";
-        "car" = "";
         "default" = [" " " " " "];
       };
     };
@@ -196,3 +174,4 @@
     };
   };
 }
+

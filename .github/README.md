@@ -27,3 +27,4 @@ If you have any questions or issues, open an issue under this repository. If you
 
 ## Credits
 - **[NotAShelf](https://github.com/NotAShelf)** - Introduced me to NixOS, pretty much the reason this repo exists
+- **[toger5](https://github.com/toger5)** - My waybar stylesheet is a ~~stolen~~ modified version of [theirs](https://gist.github.com/toger5/3a509d9a9d7ebba1e02205b00449ccff#file-style-css)
