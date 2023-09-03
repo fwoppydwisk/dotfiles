@@ -53,7 +53,7 @@
 
     "wlr/workspaces" = {
       disable-scroll = false;
-      all-outputs = true;
+      all-outputs = false;
       format = "{icon}";
       active-only = false;
       format-icons = {

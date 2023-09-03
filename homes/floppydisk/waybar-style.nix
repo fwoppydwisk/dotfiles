@@ -20,13 +20,14 @@ window#waybar.hidden {
 #workspaces button {
   padding: 0 5px;
   background: transparent;
-  color: #cad3f5;
+  color: #494d64;
   border-bottom: 3px solid transparent;
 }
 
+#workspaces button.active
 #workspaces button.focused {
-  background: #64727D;
-  border-bottom: 3px solid #cad3f5;
+  background-color: #939ab7;
+  border-bottom: 3px solid #494d64;
 }
 
 #workspaces button.urgent {
@@ -38,13 +39,13 @@ window#waybar.hidden {
   border-bottom: 3px solid #cad3f5;
 }
 
-#custom-notification, #workspaces, #disk, #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+#custom-notification, #disk, #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
   padding: 0 10px;
   margin: 0 2px;
 }
 
 #workspaces {
-  background-color: #494d64;
+  background-color: #cad3f5;
 }
 
 #clock {
