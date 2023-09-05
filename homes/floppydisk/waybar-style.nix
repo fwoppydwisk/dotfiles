@@ -39,17 +39,21 @@ window#waybar.hidden {
   border-bottom: 3px solid #cad3f5;
 }
 
-#custom-notification, #disk, #clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+#custom-notification, #disk, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
   padding: 0 10px;
   margin: 0 2px;
 }
 
 #workspaces {
   background-color: #cad3f5;
+  margin-right: 2px;
+  padding: 0 10px;
 }
 
 #clock {
   background-color: #64727D;
+  padding: 0 10px;
+  margin-left: 2px;
 }
 
 #battery {

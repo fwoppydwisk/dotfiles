@@ -5,12 +5,11 @@
     height = 27;
     fixed-center = true;
     modules-left = [
+      "wlr/workspaces"
       "custom/notification"
-      "custom/sep"
       "tray"
     ];
     modules-center = [
-      "wlr/workspaces"
     ];
     modules-right = [
       "battery"
