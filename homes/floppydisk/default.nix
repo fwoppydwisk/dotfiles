@@ -103,8 +103,9 @@
       dotnet-sdk
       jdk17
       maven
-      dart
       purescript
+      lua
+      flutter
 
       # Comms
       nheko
