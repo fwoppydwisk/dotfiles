@@ -217,6 +217,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     settings = import ./hyprland.nix;
   };
 
