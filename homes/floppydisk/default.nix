@@ -58,6 +58,8 @@
       pwgen
       grafx2
       libreoffice-fresh
+      wiki-tui
+      calcurse
 
       # Fetch
       neofetch
@@ -136,6 +138,8 @@
       vlc
       libsForQt5.vvave
       tidal-hifi
+      spotify-tui
+      youtube-tui
 
       # zsh Themes
       zsh-powerlevel10k
