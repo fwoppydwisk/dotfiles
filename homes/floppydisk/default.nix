@@ -140,6 +140,7 @@
       tidal-hifi
       spotify-tui
       youtube-tui
+      mpv
 
       # zsh Themes
       zsh-powerlevel10k
