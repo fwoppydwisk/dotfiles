@@ -21,6 +21,10 @@
   home = {
     username = "floppydisk";
     homeDirectory = "/home/floppydisk";
+    file.".config/hypr/hyprpaper.conf".text = ''
+      preload = ${/. + ../../misc/wallpapers/oneshot-1.jpg}
+      wallpaper = ,${/. + ../../misc/wallpapers/oneshot-1.jpg}
+    '';
     packages = with pkgs; [
       # Utils
       handbrake
