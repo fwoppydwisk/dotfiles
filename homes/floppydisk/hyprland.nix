@@ -17,6 +17,13 @@
     "HDMI-A-1,1920x1080,0x0,1"
   ];
 
+  windowrulev2 = [
+    "float, title:^(Picture-in-Picture)$"
+    "pin, title:^(Picture-in-Picture)$"
+    "move 67% 72%, title:^(Picture-in-Picture)$"
+    "size 33% 28%, title:^(Picture-in-Picture)$"
+  ];
+
   input = {
     kb_layout = "us";
     follow_mouse = 1;
