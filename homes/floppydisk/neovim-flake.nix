@@ -63,7 +63,7 @@
           enable = true;
           fillChar = null;
           eolChar = null;
-          showCurrContext = true;
+          scope.enabled = true;
         };
         cursorline = {
           enable = true;
@@ -235,18 +235,18 @@
         comment-nvim.enable = true;
       };
 
-      vim.presence = {
-        presence-nvim = {
-          enable = true;
-          auto_update = true;
-          image_text = "The Superior Text Editor";
-          client_id = "793271441293967371";
-          main_image = "neovim";
-          rich_presence = {
-            editing_text = "Editing %s";
-          };
-        };
-      };
+      #vim.presence = {
+      #  presence-nvim = {
+      #    enable = true;
+      #    auto_update = true;
+      #    image_text = "The Superior Text Editor";
+      #    client_id = "793271441293967371";
+      #    main_image = "neovim";
+      #    rich_presence = {
+      #      editing_text = "Editing %s";
+      #    };
+      #  };
+      #};
     };
   };
 }
