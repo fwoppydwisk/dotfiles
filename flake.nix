@@ -1,22 +1,57 @@
 {
   description = "Your new nix config";
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  }: let
+    forAllSystems = nixpkgs.lib.genAttrs [
+      "aarch64-linux"
+      "x86_64-linux"
+      #"i686-linux"
+      #"aarch64-darwin"
+      #"x86_64-darwin"
+    ];
+  in {
+    # Entrypoint for NixOS configurations
+    nixosConfigurations = import ./hosts {inherit self;};
+
+    # devshells that are provided by this flake
+    # adding more packages to buildInputs makes them available
+    # while inside the devshell - enetered via `nix develop`
+    devShells = forAllSystems (
+      system: let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            alejandra # opionated Nix formatter
+
+            # example of bootstrapping self-contained shell
+            # applications for your flake
+            # this adds an `update` command to your shell
+            # which'll update all inputs and commit
+            (writeShellApplication {
+              name = "update";
+              text = ''
+                nix flake update && git commit flake.lock -m "flake: bump inputs"
+              '';
+            })
+          ];
+        };
+      }
+    );
+
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+  };
 
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # based unstable packages
-    nixpkgs-master.url = "github:nixos/nixpkgs/master"; # cringe stable packages
+    # Nixpkgs (unstable)
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home manager
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # neovim-flake
-    neovim-flake = {
-      url = "github:notashelf/neovim-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager/";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # arrpc
     arrpc = {
@@ -24,80 +59,19 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland
+    # nixos-hardware
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    lanzaboote.url = "github:nix-community/lanzaboote";
+
     hyprland.url = "github:hyprwm/Hyprland";
-  };
-
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    hyprland,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-    forAllSystems = nixpkgs.lib.genAttrs [
-      "aarch64-linux"
-      "i686-linux"
-      "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
-    ];
-  in rec {
-    # Your custom packages
-    # Acessible through 'nix build', 'nix shell', etc
-    packages = forAllSystems (
-      system: let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-        import ./pkgs {inherit pkgs;}
-    );
-    # Devshell for bootstrapping
-    # Acessible through 'nix develop' or 'nix-shell' (legacy)
-    devShells = forAllSystems (
-      system: let
-        pkgs = nixpkgs.legacyPackages.${system};
-      in
-        import ./shell.nix {inherit pkgs;}
-    );
-
-    # Your custom packages and modifications, exported as overlays
-    # overlays = import ./overlays {inherit inputs;}; # TODO: only use overlays when you understand what tthey do
-
-    # Reusable nixos modules you might want to export
-    # These are usually stuff you would upstream into nixpkgs
-    # nixosModules = import ./modules/public/nixos;
-    # Reusable home-manager modules you might want to export
-    # These are usually stuff you would upstream into home-manager
-    # homeManagerModules = import ./modules/public/home-manager;
-
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
-    nixosConfigurations = import ./hosts {inherit nixpkgs self outputs;};
-
-    # Standalone home-manager configuration entrypoint
-    # Available through 'home-manager --flake .#your-username@your-hostname'
-    homeConfigurations = {
-      "floppydisk@nixbox" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-          hyprland.homeManagerModules.default
-          {wayland.windowManager.hyprland.enable = true;}
-          # > Our main home-manager configuration file <
-          ./homes/floppydisk
-        ];
-      };
-      "floppydisk@nixpad" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [
-          hyprland.homeManagerModules.default
-          {wayland.windowManager.hyprland.enable = true;}
-          # > Our main home-manager configuration file <
-          ./homes/floppydisk
-        ];
-      };
+    hyprgrass = {
+      url = "github:horriblename/hyprgrass";
+      inputs.hyprland.follows = "hyprland";
+    };
+    neovim-flake = {
+      url = "github:notashelf/neovim-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 }

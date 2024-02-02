@@ -1,19 +1,18 @@
 {
   inputs,
   self,
-  outputs,
+  config,
   ...
 }: {
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
     extraSpecialArgs = {
-      inherit inputs self outputs;
+      inherit inputs self;
     };
     users = {
-      # TODO: "base" user that will be used by default is there is no defined
-      # home directory for the user
       floppydisk = ./floppydisk;
+      # more users can go here, the format is only for convenience
     };
   };
 }
