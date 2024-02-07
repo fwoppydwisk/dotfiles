@@ -72,23 +72,24 @@
   };
 
   environment.systemPackages = with pkgs; [
-  gcc  
-  git
-  grim
-  lxqt.lxqt-policykit
-  pavucontrol
-  pciutils
-  pulseaudio
-  screen
-  slurp
-  usbutils
-  wget
-  wl-clipboard
-  xdg-utils
-  swaynotificationcenter
-  swayidle
-  wofi
-  swaylock
+    gcc
+    git
+    grim
+    lxqt.lxqt-policykit
+    pavucontrol
+    pciutils
+    pulseaudio
+    screen
+    slurp
+    usbutils
+    wget
+    wl-clipboard
+    xdg-utils
+    swaynotificationcenter
+    swayidle
+    wofi
+    swaylock
+    gnome.gnome-keyring
   ];
 
   services.printing.enable = true;
@@ -107,7 +108,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.systemd.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  
 
   # Set a time zone, idiot
   time.timeZone = "Europe/London";
@@ -148,9 +148,8 @@
   # Feel free to remove if you don't need it.
 
   services.openssh.enable = true;
-  
+
   networking.firewall.enable = false;
-  
+
   system.stateVersion = "24.05";
-  
 }
