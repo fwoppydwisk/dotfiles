@@ -77,6 +77,11 @@
 
   "general:resize_on_border" = "true";
 
+  bindl = [
+    ",switch:on:Lid Switch,exec,hyprctl keyword monitor LVDS-1, disable"
+    ",switch:off:Lid Switch,exec,hyprctl keyword monitor LVDS-1, 1600x900, 0x0, 1"
+  ];
+
   bindm = [
     # mouse binds
     "ALT,mouse:272,movewindow"
