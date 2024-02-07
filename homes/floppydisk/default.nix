@@ -14,6 +14,11 @@
     username = "floppydisk";
     homeDirectory = "/home/floppydisk";
     file.".config/lockonsleep/config.sh".source = ./lock.sh;
+    file.".config/hypr/hyprpaper.conf".text = ''
+      preload = ${/. + ../../misc/wallpapers/oneshot-1.jpg}
+      wallpaper = ,${/. + ../../misc/wallpapers/oneshot-1.jpg}
+      splash = false
+    '';
   };
 
   wayland.windowManager.hyprland = {
@@ -46,15 +51,15 @@
       plugins = [
         "git"
         "thefuck"
-       ];
-       custom = "$HOME/.oh-my-custom";
-       theme = "powerlevel10k/powerlevel10k";
+      ];
+      custom = "$HOME/.oh-my-custom";
+      theme = "powerlevel10k/powerlevel10k";
     };
     plugins = [
       {
-         name = "powerlevel10k";
-         src = pkgs.zsh-powerlevel10k;
-         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
     initExtra = ''
@@ -67,9 +72,9 @@
     userName = "Frankie B.";
     userEmail = "git@diskfloppy.me";
     extraConfig = {
-      commit.gpgsign = true;
-      gpg.format = "ssh";
-      user.signingkey = "~/.ssh/id_ed25519.pub";
+      # commit.gpgsign = true;
+      # gpg.format = "ssh";
+      # user.signingkey = "~/.ssh/id_ed25519.pub";
       init.defaultBranch = "master";
     };
   };

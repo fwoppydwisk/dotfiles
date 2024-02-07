@@ -5,7 +5,7 @@
     height = 27;
     fixed-center = true;
     modules-left = [
-      "wlr/workspaces"
+      "hyprland/workspaces"
       "custom/notification"
       "tray"
     ];
@@ -50,10 +50,13 @@
       escape = true;
     };
 
-    "wlr/workspaces" = {
+    "hyprland/workspaces" = {
       disable-scroll = false;
       all-outputs = false;
       format = "{icon}";
+      "on-scroll-up" = "hyprctl dispatch workspace e+1";
+      "on-scroll-down" = "hyprctl dispatch workspace e-1";
+      "on-click" = "activate";
       active-only = false;
       format-icons = {
         "1" = "I";
@@ -135,8 +138,8 @@
         "critical" = 5;
       };
       format = "{icon}{capacity}%  ";
-      format-charging = " {capacity}%  ";
-      format-plugged = " {capacity}%  ";
+      format-charging = "  {capacity}%";
+      format-plugged = "  {capacity}%";
       format-alt = "{icon}{time}";
       format-icoms = ["  " "  " "  " "  " "  "];
     };

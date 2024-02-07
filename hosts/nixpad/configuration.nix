@@ -15,7 +15,6 @@
   services.xserver = {
     enable = true;
     displayManager.sddm.enable = true;
-    desktopManager.plasma5.enable = true;
     xkb.layout = "us";
     libinput.enable = true;
   };
@@ -102,6 +101,7 @@
   ];
 
   networking.hostName = "nixpad";
+  networking.networkmanager.enable = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

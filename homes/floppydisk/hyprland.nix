@@ -12,10 +12,7 @@
     "1password --silent"
   ];
 
-  monitor = [
-    "DVI-D-1,1920x1080,1920x0,1"
-    "HDMI-A-1,1920x1080,0x0,1"
-  ];
+  monitor = [];
 
   windowrulev2 = [
     "float, title:^(Picture-in-Picture)$"
