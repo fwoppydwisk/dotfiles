@@ -43,6 +43,7 @@
     grim
     wlogout
     hyprpaper
+    brightnessctl
 
     # fetch
     neofetch

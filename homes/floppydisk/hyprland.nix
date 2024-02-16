@@ -94,6 +94,10 @@
     # mute key
     ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
+    # brightness controls
+    ", XF86MonBrightnessUp, exec, brightnessctl s +20%"
+    ", XF86MonBrightnessDown, exec, brightnessctl s 20%-"
+
     # general shortcuts
     "$mod, Q, exec, kitty"
     "$mod, C, killactive, "
