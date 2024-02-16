@@ -137,7 +137,7 @@
         "warning" = 30;
         "critical" = 5;
       };
-      format = "{icon}{capacity}%  ";
+      format = "{icon}{capacity}%";
       format-charging = "  {capacity}%";
       format-plugged = "  {capacity}%";
       format-alt = "{icon}{time}";
