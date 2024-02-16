@@ -18,6 +18,7 @@
     qemu
     virt-manager
     exactaudiocopy
+    abcde
     fsv
     lsd
     lsdvd
@@ -71,6 +72,7 @@
     mycli
     squirrel-sql
     figma-linux
+    processing
 
     # langs
     openscad
@@ -83,7 +85,6 @@
     deno
     python310
     python310Packages.pip
-    python310Packages.discordpy
     dotnet-sdk
     jdk17
     maven
@@ -93,7 +94,6 @@
 
     # comms
     nheko
-    element-desktop
     vesktop
     caprine-bin
     teamspeak5_client
@@ -109,7 +109,6 @@
     prismlauncher
     fceux
     snes9x
-    heroic
     openrct2
     osu-lazer-bin
 

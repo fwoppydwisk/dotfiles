@@ -14,10 +14,11 @@
 
   services.xserver = {
     enable = true;
-    displayManager.sddm.enable = true;
     xkb.layout = "us";
     libinput.enable = true;
   };
+
+  services.tailscale.enable = true;
 
   hardware.opengl = {
     enable = true;
@@ -90,8 +91,14 @@
     wofi
     swaylock
     gnome.gnome-keyring
+    gtklock
+    fprintd
+    tailscale
   ];
 
+  services.fprintd = {
+    enable = true;
+  };
   services.printing.enable = true;
 
   fonts.packages = with pkgs; [
@@ -101,7 +108,7 @@
     winePackages.fonts
   ];
 
-  networking.hostName = "nixpad";
+  networking.hostName = "watermelon";
   networking.networkmanager.enable = true;
 
   boot.loader.systemd-boot.enable = true;
@@ -148,6 +155,29 @@
   # Feel free to remove if you don't need it.
 
   services.openssh.enable = true;
+
+  services.greetd = {
+    enable = true;
+    restart = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        user = "greeter";
+      };
+    };
+  };
+
+  systemd.services.greetd.serviceConfig = {
+    Type = "idle";
+    StandardInput = "tty";
+    StandardOutput = "tty";
+    StandardError = "journal";
+    TTYReset = "true";
+    TTYHangup = "true";
+    TTYVTDisallocate = true;
+  };
+
+  security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
 
   networking.firewall.enable = false;
 

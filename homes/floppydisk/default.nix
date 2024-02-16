@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    ./arrpc.nix
     ./packages.nix # home.packages and similar stuff
     ./neovim-flake.nix
   ];
@@ -15,8 +14,8 @@
     homeDirectory = "/home/floppydisk";
     file.".config/lockonsleep/config.sh".source = ./lock.sh;
     file.".config/hypr/hyprpaper.conf".text = ''
-      preload = ${/. + ../../misc/wallpapers/oneshot-1.jpg}
-      wallpaper = ,${/. + ../../misc/wallpapers/oneshot-1.jpg}
+      preload = ${/. + ../../misc/wallpapers/ibm.png}
+      wallpaper = ,${/. + ../../misc/wallpapers/ibm.png}
       splash = false
     '';
   };
@@ -34,7 +33,7 @@
   };
 
   services.udiskie.enable = true;
-
+  services.arrpc.enable = true;
   programs.zsh = {
     enable = true;
     shellAliases = {
