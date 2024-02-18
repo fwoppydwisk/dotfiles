@@ -12,6 +12,10 @@ in {
   programs.ssh = {
     enable = true;
     forwardAgent = _1passwordAgent.enable;
-    extraConfig = lib.optionalString _1passwordAgent.enable "IdentityAgent ${_1passwordAgent.path}";
+    extraConfig = ''
+      Host *
+        IdentityAgent ~/.1password/agent.sock
+    '';
   };
 }
+

@@ -1,12 +1,13 @@
 {
   pkgs,
   lib,
-  inputs,
   ...
 }: {
   imports = [
     ./packages.nix # home.packages and similar stuff
     ./neovim-flake.nix
+    ./ssh.nix
+    ./git.nix
   ];
 
   home = {
