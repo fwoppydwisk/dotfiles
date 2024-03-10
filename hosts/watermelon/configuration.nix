@@ -177,6 +177,8 @@
     TTYVTDisallocate = true;
   };
 
+  systemd.services.NetworkManager-wait-online.enable = lib.mkForce false;
+
   security.pam.services.gtklock.text = lib.readFile "${pkgs.gtklock}/etc/pam.d/gtklock";
 
   networking.firewall.enable = false;
