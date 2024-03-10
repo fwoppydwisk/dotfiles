@@ -117,7 +117,6 @@
     vlc
     libsForQt5.vvave
     tidal-hifi
-    spotify-tui
     youtube-tui
     mpv
     spotify
