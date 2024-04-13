@@ -43,6 +43,7 @@
     wlogout
     hyprpaper
     brightnessctl
+    josm
 
     # fetch
     neofetch
