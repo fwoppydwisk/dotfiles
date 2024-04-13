@@ -74,10 +74,6 @@
 
   "general:resize_on_border" = "true";
 
-  "device:gm-tek-usb-composite-device-1" = {
-    sensitivity = 1.0;
-  };
-
   bindl = [
     ",switch:on:Lid Switch,exec,${/. + ../../misc/scripts/lidclose.sh}"
     ",switch:off:Lid Switch,exec,${/. + ../../misc/scripts/lidopen.sh}"
