@@ -4,7 +4,6 @@
     handbrake
     thunderbird
     picard
-    realvnc-vnc-viewer
     rpi-imager
     obs-studio
     yt-dlp
