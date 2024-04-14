@@ -115,6 +115,9 @@
     "$mod SHIFT, K, movewindow, u"
     "$mod SHIFT, J, movewindow, d"
 
+    # maximize window
+    "$mod, return, fullscreen, 0"
+
     # screenshot
     ", Print, exec, grim -l 9 -g \"$(slurp)\" - | wl-copy"
 
