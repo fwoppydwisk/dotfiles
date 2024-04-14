@@ -121,8 +121,8 @@
     # screenshot
     ", Print, exec, grim -l 9 -g \"$(slurp)\" - | wl-copy"
 
-    # rofi
-    "$mod, D, exec, rofi -show drun --show-icons"
+    # wofi
+    "$mod, D, exec, wofi --show=drun -G"
 
     # workspace scroll
     "$mod, mouse_down, workspace, e+1"

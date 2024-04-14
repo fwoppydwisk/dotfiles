@@ -38,7 +38,7 @@
     wiki-tui
     calcurse
     kitty
-    rofi
+    wofi
     grim
     wlogout
     hyprpaper
