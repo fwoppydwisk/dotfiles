@@ -10,7 +10,7 @@
 window#waybar {
   background: rgba(43, 48, 59, 0.5);
   border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-  color: #1e2030;
+  color: #181825;
 }
 
 window#waybar.hidden {
@@ -20,14 +20,14 @@ window#waybar.hidden {
 #workspaces button {
   padding: 0 5px;
   background: transparent;
-  color: #494d64;
+  color: #45475a;
   border-bottom: 3px solid transparent;
 }
 
 #workspaces button.active
 #workspaces button.focused {
-  background-color: #939ab7;
-  border-bottom: 3px solid #494d64;
+  background-color: #9399b2;
+  border-bottom: 3px solid #45475a;
 }
 
 #workspaces button.urgent {
@@ -39,13 +39,13 @@ window#waybar.hidden {
   border-bottom: 3px solid #cad3f5;
 }
 
-#custom-notification, #disk, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
+#custom-notification, #disk, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor, #bluetooth {
   padding: 0 10px;
   margin: 0 2px;
 }
 
 #workspaces {
-  background-color: #cad3f5;
+  background-color: #cdd6f4;
   margin-right: 2px;
   padding: 0 10px;
 }
@@ -57,23 +57,23 @@ window#waybar.hidden {
 }
 
 #battery {
-  background-color: #cad3f5;
+  background-color: #cdd6f4;
 }
 
 #battery.charging {
-  color: #cad3f5;
+  color: #cdd6f4;
   background-color: #26A65B;
 }
 
 @keyframes blink {
   to {
-    background-color: #cad3f5;
+    background-color: #cdd6f4;
   }
 }
 
 #battery.critical:not(.charging) {
   background: #f53c3c;
-  color: #cad3f5;
+  color: #cdd6f4;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -82,11 +82,11 @@ window#waybar.hidden {
 }
 
 #cpu {
-  background: #a6da95;
+  background: #a6e3a1;
 }
 
 #memory {
-  background: #c6a0f6;
+  background: #cba6f7;
 }
 
 #backlight {
@@ -94,12 +94,16 @@ window#waybar.hidden {
 }
 
 #network {
-  background: #f5a97f;
+  background: #fab387;
 }
 
 #disk {
   background: #2980b9;
-  color: #cad3f5;
+  color: #cdd6f4;
+}
+
+#bluetooth {
+  background: #74c7ec;
 }
 
 
@@ -108,7 +112,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  background: #eed49f;
+  background: #f9e2af;
   color: #000000;
 }
 
@@ -152,7 +156,7 @@ window#waybar.hidden {
 }
 
 #custom-notification {
-  color: #1e2030;
-  background-color: #8bd5ca;
+  color: #181825;
+  background-color: #94e2d5;
 }
 ''
