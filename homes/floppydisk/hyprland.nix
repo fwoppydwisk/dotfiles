@@ -10,6 +10,7 @@
     "waybar"
     "swaync"
     "1password --silent"
+    "blueman-applet"
   ];
 
   monitor = [];
@@ -19,6 +20,10 @@
     "pin, title:^(Picture-in-Picture)$"
     "move 67% 72%, title:^(Picture-in-Picture)$"
     "size 33% 28%, title:^(Picture-in-Picture)$"
+  ];
+
+  windowrule = [
+    "float,^(blueman-manager)$"
   ];
 
   input = {
