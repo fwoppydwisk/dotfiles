@@ -111,9 +111,9 @@
 
     "clock" = {
       timezone = "Europe/London";
-      format = "{:  %H:%M}";
-      format-alt = "{:  %H:%M    %d/%m/%Y}";
-      tooltip-format = "{:  %H:%M    %d/%m/%Y}";
+      format = "  {:%H:%M}";
+      format-alt = " {:%H:%M}    {%d/%m/%Y}";
+      tooltip-format = "  {:%H:%M}    {%d/%m/%Y}";
       today-format = "<span color='#aaaaaa'><b><u>{}</u></b></span>";
       calendar-weeks-pos = "right";
       format-calendar = "<span color='#aaaaaa'><b><u>{}</u></b></span>";
