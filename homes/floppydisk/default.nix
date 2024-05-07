@@ -15,8 +15,8 @@
     homeDirectory = "/home/floppydisk";
     file.".config/lockonsleep/config.sh".source = ./lock.sh;
     file.".config/hypr/hyprpaper.conf".text = ''
-      preload = ${/. + ../../misc/wallpapers/ibm.png}
-      wallpaper = ,${/. + ../../misc/wallpapers/ibm.png}
+      preload = ${/. + ../../misc/wallpapers/oneshot-1.jpg}
+      wallpaper = ,${/. + ../../misc/wallpapers/oneshot-1.jpg}
       splash = false
     '';
   };
