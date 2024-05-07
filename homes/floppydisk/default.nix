@@ -53,7 +53,7 @@
         "thefuck"
       ];
       custom = "$HOME/.oh-my-custom";
-      theme = "powerlevel10k/powerlevel10k";
+      #theme = "powerlevel10k/powerlevel10k";
     };
     plugins = [
       {
