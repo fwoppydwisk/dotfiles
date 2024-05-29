@@ -9,7 +9,6 @@
     yt-dlp
     _1password-gui
     _1password
-    git-credential-1password
     firefox-devedition
     rdesktop
     _3llo
@@ -63,7 +62,6 @@
     jetbrains.rider
     jetbrains.phpstorm
     jetbrains.idea-ultimate
-    jetbrains.webstorm
     lazygit
     wakatime
     mongodb-compass
@@ -105,7 +103,6 @@
     pcsx2
     steam
     gzdoom
-    minecraft
     dolphin-emu
     prismlauncher
     fceux

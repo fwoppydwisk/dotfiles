@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./packages.nix # home.packages and similar stuff
-    ./neovim-flake.nix
+    ./nvf.nix
     ./ssh.nix
     ./git.nix
   ];

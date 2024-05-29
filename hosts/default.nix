@@ -30,4 +30,13 @@ in {
       home
     ];
   };
+
+  "banana" = mkSystem {
+    specialArgs = commonArgs;
+    modules = [
+      ./banana/configuration.nix
+      home-manager
+      home
+    ];
+  };
 }

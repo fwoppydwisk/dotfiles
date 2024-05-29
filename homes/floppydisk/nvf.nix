@@ -4,10 +4,10 @@
   ...
 }: {
   imports = [
-    inputs.neovim-flake.homeManagerModules.default
+    inputs.nvf.homeManagerModules.default
   ];
 
-  programs.neovim-flake = {
+  programs.nvf = {
     enable = true;
     settings = {
       vim = {
@@ -92,52 +92,53 @@
       };
 
       vim.filetree = {
-                nvimTree = {
+        nvimTree = {
           enable = true;
           openOnSetup = true;
-          disableNetrw = true;
+          setupOpts = {
+            disable_netrw = true;
 
-          hijackUnnamedBufferWhenOpening = true;
-          hijackCursor = true;
-          hijackDirectories = {
-            enable = true;
-            autoOpen = true;
-          };
-
-          git = {
-            enable = true;
-            showOnDirs = false;
-            timeout = 100;
-          };
-
-          view = {
-            preserveWindowProportions = false;
-            cursorline = false;
-            width = {
-              min = 35;
-              max = -1;
-              padding = 1;
+            hijack_unnamed_buffer_when_opening = true;
+            hijack_cursor = true;
+            hijack_directories = {
+              enable = true;
+              autoOpen = true;
             };
-          };
 
-          renderer = {
-            indentMarkers.enable = true;
-            rootFolderLabel = false;
-
-            icons = {
-              modifiedPlacement = "after";
-              gitPlacement = "after";
-              show.git = true;
-              show.modified = true;
+            git = {
+              enable = true;
+              showOnDirs = false;
+              timeout = 100;
             };
-          };
 
-          diagnostics.enable = true;
+            view = {
+              cursorline = false;
+              width = {
+                min = 35;
+                max = -1;
+                padding = 1;
+              };
+            };
 
-          modified = {
-            enable = true;
-            showOnDirs = false;
-            showOnOpenDirs = true;
+            renderer = {
+              indent_markers.enable = true;
+              root_folder_label = false;
+
+              icons = {
+                modified_placement = "after";
+                git_placement = "after";
+                show.git = true;
+                show.modified = true;
+              };
+            };
+
+            diagnostics.enable = true;
+
+            modified = {
+              enable = true;
+              show_on_dirs = false;
+              show_on_open_dirs = true;
+            };
           };
 
           mappings = {
@@ -162,7 +163,7 @@
       vim.git = {
         enable = true;
         gitsigns.enable = true;
-        gitsigns.codeActions = false;
+        gitsigns.codeActions.enable = false;
       };
 
       vim.minimap = {
@@ -210,7 +211,7 @@
         noice.enable = true;
         smartcolumn = {
           enable = true;
-          columnAt.languages = {
+          setupOpts.custom_colorcolumn = {
             nix = 150;
             ruby = 110;
             java = 120;
