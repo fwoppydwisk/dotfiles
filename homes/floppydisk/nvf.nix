@@ -78,12 +78,12 @@
         };
       };
 
-      vim.theme = {
-        enable = true;
-        name = "onedark";
-        style = "dark";
-        transparent = false;
-      };
+      #vim.theme = {
+      #  enable = true;
+      #  name = "onedark";
+      #  style = "dark";
+        #transparent = false;
+      #};
       vim.autopairs.enable = true;
 
       vim.autocomplete = {
@@ -212,10 +212,10 @@
         smartcolumn = {
           enable = true;
           setupOpts.custom_colorcolumn = {
-            nix = 150;
-            ruby = 110;
-            java = 120;
-            go = [110 150];
+            nix = "150";
+            ruby = "110";
+            java = "120";
+            go = ["110" "150"];
           };
         };
       };

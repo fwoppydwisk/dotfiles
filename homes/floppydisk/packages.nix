@@ -3,7 +3,7 @@
     # utils
     handbrake
     thunderbird
-    picard
+    #picard
     rpi-imager
     obs-studio
     yt-dlp
@@ -20,7 +20,7 @@
     fsv
     lsd
     lsdvd
-    thefuck
+   # thefuck
     zip
     unzip
     notion-app-enhanced
@@ -89,13 +89,13 @@
     maven
     purescript
     lua
-    flutter
+    #flutter
 
     # comms
     nheko
     vesktop
     caprine-bin
-    teamspeak5_client
+    teamspeak_client
 
     # gaming
     rpcs3
