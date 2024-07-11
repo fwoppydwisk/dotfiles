@@ -56,13 +56,8 @@
     # nixos-hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    lanzaboote.url = "github:nix-community/lanzaboote";
-
     hyprland.url = "github:hyprwm/Hyprland?submodules=1";
-    hyprgrass = {
-      url = "github:horriblename/hyprgrass";
-      inputs.hyprland.follows = "hyprland";
-    };
+
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -50,7 +50,7 @@
       enable = true;
       plugins = [
         "git"
-        "thefuck"
+#        "thefuck"
       ];
       custom = "$HOME/.oh-my-custom";
       #theme = "powerlevel10k/powerlevel10k";

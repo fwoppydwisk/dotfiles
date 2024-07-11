@@ -2,7 +2,7 @@
   # get inputs from self
   inherit (self) inputs;
   # get necessary inputs from self.inputs
-  inherit (inputs) nixpkgs lanzaboote nixos-hardware;
+  inherit (inputs) nixpkgs;
   inherit (inputs.home-manager.nixosModules) home-manager;
   # get lib from nixpkgs and create and alias  for lib.nixosSystem
   # for potential future overrides & abstractions

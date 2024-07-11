@@ -15,15 +15,13 @@
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-    libinput.enable = true;
   };
 
   services.tailscale.enable = true;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   nixpkgs = {
@@ -109,7 +107,7 @@
     swayidle
     wofi
     swaylock
-    gnome.gnome-keyring
+    gnome-keyring
     gtklock
     fprintd
     tailscale
