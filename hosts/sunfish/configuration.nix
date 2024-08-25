@@ -19,7 +19,7 @@
 
   services.libinput.enable = true;
 
-
+  boot.loader.efi.efiSysMountPoint = "/efi";
   services.tailscale.enable = true;
 
   hardware.graphics = {
