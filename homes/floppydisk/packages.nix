@@ -56,7 +56,6 @@
     # devtools
     github-desktop
     gh
-    codeql
     vscode
     jetbrains.ruby-mine
     jetbrains.rider

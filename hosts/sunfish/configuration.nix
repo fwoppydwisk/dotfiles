@@ -91,7 +91,7 @@
     swayidle
     wofi
     swaylock
-    gnome.gnome-keyring
+    gnome-keyring
     gtklock
     tailscale
   ];
@@ -105,15 +105,11 @@
     winePackages.fonts
   ];
 
-  networking.hostName = "banana";
+  networking.hostName = "sunfish";
   networking.networkmanager.enable = true;
 
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.grub.efiSupport = false;
-
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.systemd.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 

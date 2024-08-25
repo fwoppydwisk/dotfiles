@@ -31,10 +31,10 @@ in {
     ];
   };
 
-  "banana" = mkSystem {
+  "sunfish" = mkSystem {
     specialArgs = commonArgs;
     modules = [
-      ./banana/configuration.nix
+      ./sunfish/configuration.nix
       home-manager
       home
     ];
